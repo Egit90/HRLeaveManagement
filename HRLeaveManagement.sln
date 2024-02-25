@@ -11,13 +11,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRLeaveManagement.Domain", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRLeaveManagement.Application", "src\Core\HRLeaveManagement.Application\HRLeaveManagement.Application.csproj", "{584B1273-EB71-4EEE-9931-4EA1CF5475DE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infostructure", "Infostructure", "{28CFEBB8-7C97-4BA0-AE21-200F70FF5A36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRLeaveManagement.Persistence", "src\Infostructure\HRLeaveManagement.Presostence\HRLeaveManagement.Persistence.csproj", "{5E64E14C-FE61-48F4-BDE7-8D4A2DF4200E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{789D8610-E58C-4D84-8EC1-86C80B6A9C3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -28,10 +29,19 @@ Global
 		{584B1273-EB71-4EEE-9931-4EA1CF5475DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{584B1273-EB71-4EEE-9931-4EA1CF5475DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{584B1273-EB71-4EEE-9931-4EA1CF5475DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E64E14C-FE61-48F4-BDE7-8D4A2DF4200E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E64E14C-FE61-48F4-BDE7-8D4A2DF4200E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E64E14C-FE61-48F4-BDE7-8D4A2DF4200E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E64E14C-FE61-48F4-BDE7-8D4A2DF4200E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{14613B72-8C33-46B5-914B-4BF9CE076783} = {8BD8EF2B-2347-4C61-884C-F9947C5DC85B}
 		{789D8610-E58C-4D84-8EC1-86C80B6A9C3C} = {14613B72-8C33-46B5-914B-4BF9CE076783}
 		{584B1273-EB71-4EEE-9931-4EA1CF5475DE} = {14613B72-8C33-46B5-914B-4BF9CE076783}
+		{28CFEBB8-7C97-4BA0-AE21-200F70FF5A36} = {8BD8EF2B-2347-4C61-884C-F9947C5DC85B}
+		{5E64E14C-FE61-48F4-BDE7-8D4A2DF4200E} = {28CFEBB8-7C97-4BA0-AE21-200F70FF5A36}
 	EndGlobalSection
 EndGlobal
