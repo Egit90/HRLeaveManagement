@@ -22,12 +22,14 @@ public class GenericRepository<T>(HrDataBaseContext context) : IGenericRepositor
 
     public async Task<IReadOnlyList<T>> GetAsync()
     {
-        return await _context.Set<T>().ToListAsync();
+        return await _context.Set<T>().AsNoTracking().ToListAsync();
     }
 
     public async Task<T> GetByIdAsync(Guid id)
     {
-        return await _context.Set<T>().FindAsync(id);
+        return await _context.Set<T>()
+                            .AsNoTracking()
+                            .FirstOrDefaultAsync(q => q.Id == id);
     }
 
     public async Task UpdateAsync(T entity)
