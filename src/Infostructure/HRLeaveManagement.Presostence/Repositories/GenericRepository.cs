@@ -25,7 +25,7 @@ public class GenericRepository<T>(HrDataBaseContext context) : IGenericRepositor
         return await _context.Set<T>().AsNoTracking().ToListAsync();
     }
 
-    public async Task<T> GetByIdAsync(Guid id)
+    public async Task<T?> GetByIdAsync(Guid id)
     {
         return await _context.Set<T>()
                             .AsNoTracking()

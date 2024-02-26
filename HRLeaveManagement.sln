@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRLeaveManagement.Domain", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRLeaveManagement.Application", "src\Core\HRLeaveManagement.Application\HRLeaveManagement.Application.csproj", "{584B1273-EB71-4EEE-9931-4EA1CF5475DE}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infostructure", "Infostructure", "{28CFEBB8-7C97-4BA0-AE21-200F70FF5A36}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{28CFEBB8-7C97-4BA0-AE21-200F70FF5A36}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRLeaveManagement.Persistence", "src\Infostructure\HRLeaveManagement.Presostence\HRLeaveManagement.Persistence.csproj", "{5E64E14C-FE61-48F4-BDE7-8D4A2DF4200E}"
 EndProject
