@@ -4,10 +4,10 @@ using HRLeaveManagement.Persistence.DatabaseContext;
 using Microsoft.EntityFrameworkCore;
 
 namespace HRLeaveManagement.Persistence.Repositories;
-public class LeaveTypeRepository(HrDataBaseContext context) : GenericRepository<LeaveType>(context), ILeaveTypeRepository
+public class LeaveTypeRepository(HrDatabaseContext context) : GenericRepository<LeaveType>(context), ILeaveTypeRepository
 {
     public async Task<bool> IsLeaveTypeUnique(string name)
     {
-        return await _context.LeaveTypes.AnyAsync(q => q.Name == name);
+        return await _context.LeaveTypes.AnyAsync(q => q.Name == name) == false;
     }
 }

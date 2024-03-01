@@ -10,7 +10,7 @@ public static class PersistenceServiceRegistration
 {
     public static IServiceCollection AddPersistenceServices(this IServiceCollection services, IConfiguration configuration)
     {
-        services.AddDbContext<HrDataBaseContext>(opt =>
+        services.AddDbContext<HrDatabaseContext>(opt =>
         {
             opt.UseNpgsql(configuration.GetConnectionString("HrDataBaseConnectionString"));
         });

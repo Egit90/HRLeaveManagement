@@ -4,9 +4,9 @@ using HRLeaveManagement.Persistence.DatabaseContext;
 using Microsoft.EntityFrameworkCore;
 
 namespace HRLeaveManagement.Persistence.Repositories;
-public class GenericRepository<T>(HrDataBaseContext context) : IGenericRepository<T> where T : BaseEntity
+public class GenericRepository<T>(HrDatabaseContext context) : IGenericRepository<T> where T : BaseEntity
 {
-    protected readonly HrDataBaseContext _context = context;
+    protected readonly HrDatabaseContext _context = context;
 
     public async Task CreateAsync(T entity)
     {
