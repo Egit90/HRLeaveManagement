@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Features/LeaveRequest/GetLeaveRequestDetails/" />
     <Folder Include="Features/LeaveType/Commands/" />
   </ItemGroup>
 

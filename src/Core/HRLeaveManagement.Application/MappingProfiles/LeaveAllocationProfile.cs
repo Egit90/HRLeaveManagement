@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using HRLeaveManagement.Domain;
 
-namespace HRLeaveManagement.Application;
+namespace HRLeaveManagement.Application.MappingProfiles;
 
 public class LeaveAllocationProfile : Profile
 {
