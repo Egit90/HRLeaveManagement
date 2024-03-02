@@ -1,4 +1,3 @@
-using System.Runtime.CompilerServices;
 using HRLeaveManagement.Application.Features.LeaveType.Commands.CreateLeaveType;
 using HRLeaveManagement.Application.Features.LeaveType.Commands.DeleteLeaveType;
 using HRLeaveManagement.Application.Features.LeaveType.Commands.UpdateLeaveType;

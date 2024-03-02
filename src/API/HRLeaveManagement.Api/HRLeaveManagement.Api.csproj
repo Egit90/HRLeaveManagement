@@ -13,10 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers/" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\..\Infrastructure\HRLeaveManagement.Persistence\HRLeaveManagement.Persistence.csproj" />
     <ProjectReference Include="..\..\Core\HRLeaveManagement.Application\HRLeaveManagement.Application.csproj" />
     <ProjectReference Include="..\..\Infrastructure\HRLeaveManagement.Infrastructure\HRLeaveManagement.Infrastructure.csproj" />
