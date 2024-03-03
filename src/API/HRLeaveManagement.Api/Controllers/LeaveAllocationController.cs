@@ -1,6 +1,7 @@
 ﻿using HRLeaveManagement.Application;
 using MediatR;
 using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Mvc;
 
 namespace HRLeaveManagement.Api;
 
@@ -36,11 +37,11 @@ public static class LeaveAllocationController
         var res = await mediator.Send(leaveAllocation);
         return Results.CreatedAtRoute("GetAllocationById", new { id = res });
     }
-    private static async Task Put(IMediator mediator, UpdateLeaveAllocationCommand command)
+    private static async Task Put(IMediator mediator, [FromBody] UpdateLeaveAllocationCommand command)
     {
         await mediator.Send(command);
     }
-    private static async Task Delete(IMediator mediator, DeleteLeaveAllocationCommand command)
+    private static async Task Delete(IMediator mediator, [FromBody] DeleteLeaveAllocationCommand command)
     {
         await mediator.Send(command);
     }

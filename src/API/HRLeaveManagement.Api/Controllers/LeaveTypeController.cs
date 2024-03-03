@@ -15,7 +15,7 @@ public static class LeaveTypeController
     {
         var group = app.MapGroup("api/LeaveTypes").WithOpenApi();
         group.MapGet("", GetLeaveTypes);
-        group.MapGet("{id}", GetLeaveTypeDetail).WithName("GetLeaveTypeDetail");
+        group.MapGet("{id}", GetLeaveTypeDetail).WithName("GetLeaveTypeByID");
         group.MapPost("", CreateLeaveType);
         group.MapPut("", UpdateLeaveType);
         group.MapDelete("", DeleteRecord);
@@ -40,7 +40,7 @@ public static class LeaveTypeController
     public static async Task<IResult> CreateLeaveType(IMediator mediator, CreateLeaveTypeCommand leaveType)
     {
         var result = await mediator.Send(leaveType);
-        return Results.CreatedAtRoute("GetLeaveTypeDetail", new { id = result });
+        return Results.CreatedAtRoute("GetLeaveTypeByID", new { id = result });
     }
 
     public static async Task<Unit> UpdateLeaveType(IMediator mediator, UpdateLeaveTypeCommand updateLeaveTypeCommand)

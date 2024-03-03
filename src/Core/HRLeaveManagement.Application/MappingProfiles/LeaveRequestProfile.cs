@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using HRLeaveManagement.Application.Features.LeaveRequest.GetLeaveRequest;
-using HRLeaveManagement.Application.Features.LeaveRequest.GetLeaveRequestDetails;
+using HRLeaveManagement.Application.Features.LeaveRequest.Queries.GetLeaveRequest;
+using HRLeaveManagement.Application.Features.LeaveRequest.Queries.GetLeaveRequestDetails;
 using HRLeaveManagement.Domain;
 
 namespace HRLeaveManagement.Application.MappingProfiles;

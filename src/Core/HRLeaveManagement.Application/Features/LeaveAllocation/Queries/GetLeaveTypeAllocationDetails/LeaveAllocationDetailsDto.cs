@@ -24,7 +24,7 @@ public class LeaveAllocationDetailHandler(
 
     public async Task<LeaveAllocationDetailsDto> Handle(GetLeaveAllocationDetailQuery request, CancellationToken cancellationToken)
     {
-        var allocation = await _leaveAllocationRepository.GetByIdAsync(request.Id);
+        var allocation = await _leaveAllocationRepository.GetByIdAsync(request.id);
         var data = _mapper.Map<LeaveAllocationDetailsDto>(allocation);
         return data;
     }

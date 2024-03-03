@@ -1,4 +1,6 @@
+using HRLeaveManagement.Api;
 using HRLeaveManagement.Api.Controllers;
+using HRLeaveManagement.Api.Middleware;
 using HRLeaveManagement.Application;
 using HRLeaveManagement.Infrastructure;
 using HRLeaveManagement.Persistence;
@@ -21,7 +23,11 @@ builder.Services.AddCors(opt =>
 });
 var app = builder.Build();
 
+app.UseMiddleware<ExceptionMiddleware>();
+
+app.MapLeaveAllocationController();
 app.MapLeaveTypeController();
+app.MapLeaveRequestController();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

@@ -8,6 +8,7 @@ using HRLeaveManagement.Application.Features.LeaveRequest.Queries.GetLeaveReques
 using HRLeaveManagement.Application.Features.LeaveRequest.Queries.GetLeaveRequestDetails;
 using MediatR;
 using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Mvc;
 
 namespace HRLeaveManagement.Api.Controllers;
 public static class LeaveRequestController
@@ -36,16 +37,16 @@ public static class LeaveRequestController
         var data = await mediator.Send(new GetLeaveRequestDetailsQuery(ID));
         return TypedResults.Ok(data);
     }
-    private static async Task<IResult> Post(IMediator mediator, CreateLeaveRequestCommand command)
+    private static async Task<IResult> Post(IMediator mediator, [FromBody] CreateLeaveRequestCommand command)
     {
         var res = await mediator.Send(command);
         return Results.CreatedAtRoute("GetById", new { id = res });
     }
-    private static async Task Put(IMediator mediator, UpdateLeaveRequestCommand command)
+    private static async Task Put(IMediator mediator, [FromBody] UpdateLeaveRequestCommand command)
     {
         await mediator.Send(command);
     }
-    private static async Task Delete(IMediator mediator, DeleteLeaveRequestCommand command)
+    private static async Task Delete(IMediator mediator, [FromBody] DeleteLeaveRequestCommand command)
     {
         await mediator.Send(command);
     }
