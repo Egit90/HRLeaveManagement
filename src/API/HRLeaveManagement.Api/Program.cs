@@ -28,6 +28,7 @@ app.UseMiddleware<ExceptionMiddleware>();
 app.MapLeaveAllocationController();
 app.MapLeaveTypeController();
 app.MapLeaveRequestController();
+app.UseCors("all");
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
